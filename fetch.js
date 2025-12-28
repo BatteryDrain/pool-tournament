@@ -29,8 +29,7 @@ function csvToBIGARRAY(csvString) {
         DATASORTED.push(DATA[d]);
     }
 
-    loadScript("DATA2.js", () => {
-        loadScript("script.js");
+    loadScript("script.js", () => {
       });
 }
 
