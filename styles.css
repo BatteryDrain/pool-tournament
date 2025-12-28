@@ -5,6 +5,12 @@
 body {
     margin: 0;
     font-family: "Mulish", Arial, sans-serif;
+    background-color: darkgreen;
+}
+
+header {
+    color: white;
+    background-color: rgb(1, 67, 1);
 }
 
 table {
