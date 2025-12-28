@@ -17,6 +17,6 @@ function build(){
             }
             tr.appendchild(td);
         }
-        out.appendchild(row);
+        out.appendchild(tr);
     }
 }
