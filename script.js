@@ -25,9 +25,10 @@ function build() {
 
         for (let k = 0; k < WIDTH; k++) {
             let val = DATASORTED[j][k];
-            if (val === "W") temp += "✅";
-            else if (val === "L") temp += "❌";
-            else temp += "NA";
+            console.log(val);
+            if (val === "W") temp += " ✅";
+            else if (val === "L") temp += " ❌";
+            else temp += " NA";
         }
 
         td.textContent = temp;
