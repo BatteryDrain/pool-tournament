@@ -24,18 +24,17 @@ td, th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
-  color: black; /* default text color */
+  color: black;
 }
 
 /* white rows */
 tr:nth-child(odd) td {
-  background-color: white;
+  background-color: #dddddd;
   color: black;
 }
 
 /* green / gray rows */
 tr:nth-child(even) td {
-  background-color: #dddddd;
   color: black;
 }
 
