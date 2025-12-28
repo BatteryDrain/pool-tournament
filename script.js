@@ -1,40 +1,39 @@
 console.log("in script.js");
-WIDTH = 5;
+WIDTH = 4;
 build();
+
 function build() {
     let row = document.createElement("tr");
-
-    for (i = 0; i < 5; i++) {
-        let tableHead = document.createElement("th");
-        tableHead.textContent = DATASORTED[1][i];
-        row.appendChild(tableHead);
+    for (let i = 0; i < 5; i++) {
+        let th = document.createElement("th");
+        th.textContent = DATASORTED[1][i];
+        row.appendChild(th);
     }
     out.appendChild(row);
 
-    for (j = 2; j < DATASORTED.length; j++) {
+    for (let j = 2; j < DATASORTED.length; j++) {
         row = document.createElement("tr");
-        for (i = 0; i < DATASORTED[j].length; i++) {
-            let td = document.createElement("td");
-            let text = DATASORTED[j][i];
-            if(text == "W" || text == "L") {
-                temp = "";
-                for(index=0; index<5; index++){
-                    text = DATASORTED[j][index];
-                    if (text == "W") {
-                        temp = temp + "✅";
-                    } else if (text == "L"){
-                        temp = temp + "❌";
-                    } else if (text == ""){
-                        temp = temp + "NA";
-                    }
-                }
-                td.textContent = temp;
-            } else {
-                td.textContent = text;
-            }
 
+        for (let i = 0; i < WIDTH; i++) {
+            let td = document.createElement("td");
+            td.textContent = DATASORTED[j][i];
             row.appendChild(td);
         }
+
+        let td = document.createElement("td");
+        let temp = "";
+
+        for (let k = 0; k < WIDTH; k++) {
+            let val = DATASORTED[j][k];
+            if (val === "W") temp += "✅";
+            else if (val === "L") temp += "❌";
+            else temp += "NA";
+        }
+
+        td.textContent = temp;
+        row.appendChild(td);
+
         out.appendChild(row);
     }
 }
+
