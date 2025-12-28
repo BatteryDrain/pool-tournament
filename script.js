@@ -22,7 +22,9 @@ function build() {
                 td.textContent = "✅";
             } else if (text === "L") {
                 td.textContent = "❌";
-            } else {
+            } else if (text === ""){
+                td.innerHTML = "no data";
+            }else {
                 td.textContent = text;
             }
 
