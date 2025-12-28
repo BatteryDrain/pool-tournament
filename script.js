@@ -7,13 +7,13 @@ function build(){
             td = document.createElement("td");
             text = DATASORTED[j][i];
             if(text == "W"){
-                th.innerHTML = "✅";
+                td.innerHTML = "✅";
             } 
             else{
-                th.innerHTML = text;
+                td.innerHTML = text;
             }
             if(text == "L"){
-                th.innerHTML = "❌";
+                td.innerHTML = "❌";
             }
             tr.appendchild(td);
         }
