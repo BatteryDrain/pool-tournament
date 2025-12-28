@@ -24,7 +24,7 @@ function build() {
         let temp = "";
 
         for (let k = 0; k < WIDTH; k++) {
-            let val = DATASORTED[j][k];
+            let val = DATASORTED[j][3 + k];
             console.log(val);
             if (val === "W") temp += " ✅";
             else if (val === "L") temp += " ❌";
