@@ -1,5 +1,5 @@
 console.log("in script.js");
-WIDTH = 5;
+WIDTH = 8;
 build();
 function build() {
     let row = document.createElement("tr");
