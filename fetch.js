@@ -10,7 +10,7 @@ const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTlWn-NChjObE_gQs28
 fetch(url)
 .then(response => response.text())
 .then(temp => {
-    // console.log("CSV text:", temp);
+    console.log("CSV text:", temp);
     csvToBIGARRAY(temp);
 })
 .catch(error => {
@@ -38,15 +38,6 @@ function csvToBIGARRAY(csvString) {
         }
         MOVIETAGS.push(temp);
     }
-
-    for(i=1; i<DATASORTED.length; i++){
-    temp = [parseInt(DATASORTED[i][0])];
-    for(j=0; j<5; j++){
-        if(DATASORTED[i][j + 17] != ''){
-            temp.push(parseInt(DATASORTED[i][j + 17]));
-        }
-    }
-    WATCH.push(temp);
     }
 
     loadScript("DATA2.js", () => {
