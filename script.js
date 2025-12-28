@@ -2,9 +2,9 @@ console.log("in script.js");
 build();
 function build(){
     for(j=0; j<DATASORTED.length; j++){
-        row = document.createElement("li");
+        tr = document.createElement("tr");
         for(i=0; i<5; i++){
-            th = document.createElement("th");
+            td = document.createElement("td");
             text = DATASORTED[j][i];
             if(text == "W"){
                 th.innerHTML = "✅";
@@ -15,7 +15,7 @@ function build(){
             if(text == "L"){
                 th.innerHTML = "❌";
             }
-            row.appendchild(th);
+            tr.appendchild(td);
         }
         out.appendchild(row);
     }
