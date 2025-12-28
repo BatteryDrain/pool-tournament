@@ -1,30 +1,33 @@
 console.log("in script.js");
 WIDTH = 5;
 build();
-function build(){
-    row = document.createElement("tr");
-    for(i=0; i<WIDTH; i++){
-        tableHead = document.createElement("th");
-        tableHead.innerHTML = DATASORTED[0][i];
-        row.appendchild(tableHead);
+function build() {
+    let row = document.createElement("tr");
+
+    for (let i = 0; i < WIDTH; i++) {
+        let tableHead = document.createElement("th");
+        tableHead.textContent = DATASORTED[0][i];
+        row.appendChild(tableHead);
     }
-    out.appendchild(row);
-    for(j=1; j<DATASORTED.length; j++){
+    out.appendChild(row);
+
+    for (let j = 1; j < DATASORTED.length; j++) {
         row = document.createElement("tr");
-        for(i=0; i<WIDTH; i++){
-            td = document.createElement("td");
-            text = DATASORTED[j][i];
-            if(text == "W"){
-                td.innerHTML = "✅";
-            } 
-            else{
-                td.innerHTML = text;
+
+        for (let i = 0; i < DATASORTED[j].length; i++) {
+            let td = document.createElement("td");
+            let text = DATASORTED[j][i];
+
+            if (text === "W") {
+                td.textContent = "✅";
+            } else if (text === "L") {
+                td.textContent = "❌";
+            } else {
+                td.textContent = text;
             }
-            if(text == "L"){
-                td.innerHTML = "❌";
-            }
-            row.appendchild(td);
+
+            row.appendChild(td);
         }
-        out.appendchild(row);
+        out.appendChild(row);
     }
 }
