@@ -19,7 +19,6 @@ fetch(url)
 
 
 function csvToBIGARRAY(csvString) {
-    console.log("in");
     console.log("to arrays");
     SMALLARRAY = csvString
     .toString().split("\r\n")
@@ -39,5 +38,5 @@ function loadScript(src, callback) {
     const script = document.createElement("script");
     script.src = src;
     script.onload = callback;
-    // document.body.appendChild(script);
+    document.body.appendChild(script);
 }
