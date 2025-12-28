@@ -6,12 +6,12 @@ function build() {
 
     for (i = 0; i < 5; i++) {
         let tableHead = document.createElement("th");
-        tableHead.textContent = DATASORTED[0][i];
+        tableHead.textContent = DATASORTED[1][i];
         row.appendChild(tableHead);
     }
     out.appendChild(row);
 
-    for (j = 1; j < DATASORTED.length-1; j++) {
+    for (j = 2; j < DATASORTED.length + 1; j++) {
         row = document.createElement("tr");
 
         for (i = 0; i < DATASORTED[j].length; i++) {
