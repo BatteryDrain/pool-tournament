@@ -11,7 +11,7 @@ function build() {
     }
     out.appendChild(row);
 
-    for (j = 2; j < DATASORTED.length + 1; j++) {
+    for (j = 2; j < DATASORTED.length; j++) {
         row = document.createElement("tr");
         for (i = 0; i < DATASORTED[j].length; i++) {
             let td = document.createElement("td");
@@ -22,7 +22,7 @@ function build() {
                     text = DATASORTED[j][index];
                     if (text == "W") {
                         temp = temp + "✅";
-                    } else if (text == "L") {
+                    } else if (text == "L"){
                         temp = temp + "❌";
                     } else if (text == ""){
                         temp = temp + "NA";
