@@ -5,12 +5,12 @@ MOVIETAGS = [[]];
 WATCH = [[]];
 
 
-const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTlWn-NChjObE_gQs28R5neBUQSAIFBd9snoqSC_JYvob1JamWVR7ON2HKqR_vcDebOp0z_8yKL5TZh/pubhtml';
+const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTlWn-NChjObE_gQs28R5neBUQSAIFBd9snoqSC_JYvob1JamWVR7ON2HKqR_vcDebOp0z_8yKL5TZh/pubhtml?output=csv';
 
 fetch(url)
 .then(response => response.text())
 .then(temp => {
-    console.log("CSV text:", temp);
+    // console.log("CSV text:", temp);
     csvToBIGARRAY(temp);
 })
 .catch(error => {
