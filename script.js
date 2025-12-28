@@ -25,6 +25,6 @@ function build(){
             }
             row.appendchild(td);
         }
-        out.appendchild(tr);
+        out.appendchild(row);
     }
 }
