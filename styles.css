@@ -5,12 +5,13 @@
 body {
     margin: 0;
     font-family: "Mulish", Arial, sans-serif;
-    background-color: darkgreen;
+    background-color:  #2A4F40;
 }
 
 header {
     color: white;
-    background-color: rgb(1, 67, 1);
+    background-color:  #1d392e;
+    margin: 0;
 }
 
 table {
@@ -27,4 +28,8 @@ td, th {
 
 tr:nth-child(even) {
   background-color: #dddddd;
+}
+
+footer {
+    color: white;
 }
