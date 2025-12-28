@@ -4,17 +4,17 @@ build();
 function build() {
     let row = document.createElement("tr");
 
-    for (let i = 0; i < WIDTH; i++) {
+    for (i = 0; i < 5; i++) {
         let tableHead = document.createElement("th");
         tableHead.textContent = DATASORTED[0][i];
         row.appendChild(tableHead);
     }
     out.appendChild(row);
 
-    for (let j = 1; j < DATASORTED.length; j++) {
+    for (j = 1; j < DATASORTED.length-1; j++) {
         row = document.createElement("tr");
 
-        for (let i = 0; i < DATASORTED[j].length; i++) {
+        for (i = 0; i < DATASORTED[j].length; i++) {
             let td = document.createElement("td");
             let text = DATASORTED[j][i];
 
