@@ -19,6 +19,7 @@ fetch(url)
 
 
 function csvToBIGARRAY(csvString) {
+    console.log("in");
     console.log("to arrays");
     SMALLARRAY = csvString
     .toString().split("\r\n")
