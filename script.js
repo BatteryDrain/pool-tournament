@@ -28,7 +28,7 @@ function build() {
             console.log(val);
             if (val === "W") temp += " ✅";
             else if (val === "L") temp += " ❌";
-            else temp += " NA";
+            else temp += "";
         }
 
         td.textContent = temp;
