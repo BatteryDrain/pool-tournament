@@ -8,9 +8,12 @@ body {
     background-color:  #2A4F40;
 }
 
-header h1 {
+header {
     color: white;
     background-color:  #1f3b30;
+}
+
+h1 {
     margin: 0;
 }
 
@@ -30,7 +33,7 @@ td, th {
 tr:nth-child(odd) td {
     background-color: #dddddd;
     color: black;
-    border: 1px solid #2A4F40;
+    /* border: 1px solid #2A4F40; */
 }
 
 tr:nth-child(even) td {
